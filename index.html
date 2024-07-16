@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Transactions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="public/styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <h1 class="mb-4 text-center">Customer Transactions</h1>
+        <div class="mb-3 d-flex justify-content-center">
+            <div class="col-5"> <input type="text" id="customerFilter" class="form-control mb-2"
+                    placeholder="Filter by customer name">
+            </div>
+            <div class="col-5 ms-4"> <input type="text" id="amountFilter" class="form-control"
+                    placeholder="Filter by transaction amount">
+            </div>
+        </div>
+        <div class="table-responsive rounded-2">
+            <table id="customersTable" class="table table-bordered table-striped rounded-2">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Customer Name</th>
+                        <th>Transaction Date</th>
+                        <th>Transaction Amount</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="mt-4 d-flex ">
+            <div class="w-50">
+                <h3>Line Chart</h3>
+                <canvas id="lineChart" class="mb-4"></canvas>
+            </div>
+            <div class="w-50">
+                <h3>Bar Chart</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <!-- Add Chart.js and date-fns adapter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/2.22.1/locale/en-US/index.min.js"></script>
+
+    <script src="public/script.js"></script>
+</body>
+
+</html>
